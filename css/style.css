@@ -31,10 +31,7 @@ body{
 .section{
     display: flex;
     width: 100%;
-}
-
-.section--margin{
-    margin-top:30px;
+    padding-top: 70px;
 }
 
 .container{
@@ -42,27 +39,28 @@ body{
     max-width: 1440px;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-
-.grid--margin{
-    margin-top: 20px;
+.wrap{
+    display: inline-flex;  /*modifiche*/
+    width: 100%;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .column{
     display: flex;
-    padding: 20px;
 }
 
-.column--align{
-    align-items: center;
-}
+
 
 .column--direction{
     flex-direction: column;
     justify-content: center;
+}
+
+.column--margin{
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 
@@ -70,6 +68,7 @@ body{
 .box{
     display: flex;
     align-items: flex-start;
+    max-width: 350px;
     flex-direction: column;
     border-radius: 5px;
     background-color: white;
@@ -94,7 +93,7 @@ body{
 }
 
 .box--margin{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 
@@ -139,11 +138,17 @@ body{
         max-width:375px;
     }
 
-    .grid{
-        grid-template-columns: none;
+    .wrap{
+        display: block;
     }
 
-    .column{
-        padding-bottom: 0 ;
+    .column--mobile{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .column--margin{
+        margin-right: 0;
+        margin-left: 0;
     }
 }
